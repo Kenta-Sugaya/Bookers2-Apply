@@ -68,15 +68,13 @@
         </nav>
       </div>
     </header>
-    <div class="body">
-      <p class="notice"><%= notice %></p>
-
+    <main>
+      <% if user_signed_in? %>
+        <%= render 'layouts/search' %>
+      <% end %>
+        <p id="notice"><%= notice %></p>
       <%= yield %>
-
-
-        
-      </div>
-    </div>
+    </main>
     <footer>
           <p class="text-center"> CopyRight Infratop.inc</p>
         </footer>
